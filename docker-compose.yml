@@ -1,0 +1,19 @@
+version: '3'
+
+networks:
+  django:
+
+services:
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: python
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./src:/src
+    command: >
+      sh -c 'python manage.py runserver 0.0.0.0:8000'
+    networks:
+      - django
