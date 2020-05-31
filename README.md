@@ -15,3 +15,24 @@ Once the project is create run `docker-compose up -d --build`. Open up your brow
 Containers created and their ports (if used) are as follows:
 
 - **django** - `:8000`
+
+## Commands
+
+Add the following aliases to you `.zshrc` file.
+
+```
+# Docker & Docker-Compose Aliases
+alias doc:run="docker-compose run "
+alias doc:build="docker-compose build"
+alias doc:up="docker-compose up"
+alias doc:down="docker-compose down"
+alias doc:ps="docker-compose ps"
+alias doc:start="docker-compose start"
+alias doc:stop="docker-compose stop"
+alias doc:purge="docker system prune -a"
+
+# Django Docker Commands Aliases
+alias doc:djangotest="doc:run webserver sh -c 'python manage.py test && flake8'"
+alias doc:djangomigrations="doc:run sh -c 'python manage.py makemigrations'"
+alias doc:djangosuperuser="doc:run webserver sh -c 'python manage.py createsuperuser'"
+```
