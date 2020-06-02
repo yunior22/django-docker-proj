@@ -32,6 +32,7 @@ alias doc:stop="docker-compose stop"
 alias doc:purge="docker system prune -a"
 
 # Django Docker Commands Aliases
+alias doc:rundjango="doc:run webserver sh -c"
 alias doc:djangotest="doc:run webserver sh -c 'python manage.py test && flake8'"
 alias doc:djangomigrations="doc:run sh -c 'python manage.py makemigrations'"
 alias doc:djangosuperuser="doc:run webserver sh -c 'python manage.py createsuperuser'"
