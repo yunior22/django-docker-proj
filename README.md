@@ -22,7 +22,7 @@ Add the following aliases to you `.zshrc` file.
 
 ```
 # Docker & Docker-Compose Aliases
-alias doc:run="docker-compose run "
+alias doc:run="docker-compose run --rm "
 alias doc:build="docker-compose build"
 alias doc:up="docker-compose up"
 alias doc:down="docker-compose down"
